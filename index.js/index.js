@@ -5,6 +5,8 @@ var webtInput = document.getElementById("content");
 var infoview = document.getElementById("infoview");
 var mainBtnApp = document.getElementById("mainBtnApp");
 var selectedInformation = -1;
+var toast1 = document.querySelector(".acceptable-Toast");
+var toast2 =document.querySelector(".Rejected-Toast")
 
 function btnApp() {
     if (mainBtnApp.innerHTML === "CREATE") {
@@ -83,3 +85,22 @@ function updateInformation() {
     cleanForm();
     mainBtnApp.innerHTML = "CREATE"
 }
+
+
+mainBtnApp.addEventListener('click',function() {
+
+    toast1.classList.add("adjacent-right")
+    setTimeout(function(){
+        toast1.classList.remove('adjacent-right')
+
+    },1500);
+})
+
+mainBtnApp.addEventListener('click',function() {
+
+    toast2.classList.add("adjacent2-right")
+    setTimeout(function(){
+        toast2.classList.remove('adjacent2-right')
+
+    },1500);
+})
